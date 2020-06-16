@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_181021) do
+ActiveRecord::Schema.define(version: 2020_06_16_180215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2020_06_16_181021) do
   create_table "rentals", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.bigint "user_id", null: false
+    t.bigint "tool_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.bigint "tool_id"
     t.index ["tool_id"], name: "index_rentals_on_tool_id"
     t.index ["user_id"], name: "index_rentals_on_user_id"
   end
@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 2020_06_16_181021) do
   create_table "tools", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.bigint "user_id_id"
+    t.bigint "user_id"
     t.string "condition"
     t.integer "price"
     t.string "photos"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id_id"], name: "index_tools_on_user_id_id"
+    t.index ["user_id"], name: "index_tools_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,4 +50,6 @@ ActiveRecord::Schema.define(version: 2020_06_16_181021) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "rentals", "tools"
+  add_foreign_key "rentals", "users"
 end
