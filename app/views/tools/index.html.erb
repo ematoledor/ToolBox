@@ -1,3 +1,8 @@
 <div>
 <h1> Browse from the Catalog of tools here </h1>
+<ul>
+  <% @tools.each do |tool| %>
+    <li><%= link_to tool.name, tool_path(tool) %></li>
+  <% end %>
+</ul>
 </div>
