@@ -3,7 +3,7 @@ class AddToolsTable < ActiveRecord::Migration[6.0]
     create_table :tools do |t|
       t.string :name
       t.text :description
-      t.references :user_id
+      t.references :user
       t.string :condition
       t.integer :price
       t.string :photos
