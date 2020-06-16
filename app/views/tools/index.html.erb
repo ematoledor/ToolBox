@@ -1,3 +1,11 @@
 <div>
-<h1> Browse from the Catalog of tools here </h1>
+<h1> Browse from the Catalog of tools listed below </h1>
+</div>
+
+<div>
+    <ul>
+        <% @tools.each do |tool|%>
+            <li><%=tool.name%> - <%=tool.description%> - <%=tool.price%> </li>
+        <%end%>
+    </ul>
 </div>
