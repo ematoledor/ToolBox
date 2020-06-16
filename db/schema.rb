@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_163610) do
+ActiveRecord::Schema.define(version: 2020_06_16_181021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rentals", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.bigint "tool_id"
+    t.index ["tool_id"], name: "index_rentals_on_tool_id"
+    t.index ["user_id"], name: "index_rentals_on_user_id"
+  end
 
   create_table "tools", force: :cascade do |t|
     t.string "name"
