@@ -7,8 +7,19 @@ class ToolsController < ApplicationController
     end
 
     def new
+        @tool = Tool.new
+    end
+    
+    def create
+        @tool = Tool.new(tool_params)
+        @tool.save
+    
+        redirect_to tools_path(@tool)
     end
 
-    def create
+    private
+    
+    def tool_params
+        params.require(:tool).permit(:name, :description, :condition, :price)
     end
 end
