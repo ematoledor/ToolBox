@@ -1,0 +1,6 @@
+<%= simple_form_for [@tool, @rental] do |f| %>
+  <%= f.association :user, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
