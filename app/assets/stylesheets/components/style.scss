@@ -1,0 +1,150 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;1,300&display=swap');
+/* Fontawesome */
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+/*Buttons*/
+@import url("components/buttons.css");
+/* Utilities */
+body {
+  margin: 0;
+  font-family: jost
+}
+
+h1, h2, h3, h4 {
+  font-family:jost;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+  justify-content: space-evenly;
+
+
+}
+
+@media (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 55px;
+justify-content: space-around;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Custom design below! */
+.container {
+  margin: 10px;
+  text-align: center;
+}
+
+.banner {
+  background-size: cover;
+  height:500px;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Jost', sans-serif;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: 'Jost', sans-serif;
+}
+
+.card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  opacity: .5;
+}
+
+.card {
+
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+
+}
+
+.cards {
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+}
+
+.btn {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: transparent;
+padding: 20px;
+border-radius: 20px;
+display: inline-block;
+border: 1px solid #ccc;
+transition: all 0.4s ease 0.05s;
+font-family: 'Jost', sans-serif;
+}
+
+.btn:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+/*-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);*/
+background: transparent;
+color:black;
+transition: all 0.4s ease 0s;
+}
+.footer {
+  text-align: center;
+  padding: 60px;
+  background-color: #555;
+}
+
+.footer a {
+  font-size: 30px;
+  color:  #E0BBE4;
+}
+
+.footer p {
+  color: #6B6C6C;
+}
+
+.footer .fas {
+  color: #555;
+}
+
+
+
+
+
