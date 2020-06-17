@@ -10,9 +10,12 @@ class RentalsController < ApplicationController
         @rental = Rental.new(rental_params)
         @rental.tool = @tool
         @rental.user = current_user
-        @rental.save
-
-        redirect_to tool_path(@tool)    
+        
+        if @rental.save
+          redirect_to tool_path(@tool)    
+        else
+          render :new
+        end
     end
 
     def destroy
