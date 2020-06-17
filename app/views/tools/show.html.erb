@@ -27,7 +27,9 @@
 					<h4 class="price">Rental price: <span>$<%= @tool.price%> USD</span></h4>
 					<p class="vote"><strong>91%</strong> of Customers are satisfied with this product! <strong>(87 votes)</strong></p>
 					<div class="action">
-						<button class="add-to-cart btn btn-default" type="button">add to cart</button>
+						<%= link_to new_tool_rental_path(@tool) do %>
+                            <button class="add-to-cart btn btn-dark" type="button">Rent Now</button>
+                        <% end %>
 					</div>
 				</div>
 			</div>
