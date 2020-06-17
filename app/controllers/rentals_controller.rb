@@ -12,7 +12,9 @@ class RentalsController < ApplicationController
         @rental.user = current_user
         
         if @rental.save
-          redirect_to tool_path(@tool)    
+          redirect_to tools_path
+          flash[:alert] = "Congrats! The tool is now available on your toolbox."
+    
         else
           render :new
         end
