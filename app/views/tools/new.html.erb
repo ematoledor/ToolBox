@@ -1,13 +1,11 @@
 <h1> Enter the required informtion for Listing a new Tool </h1>
 
-<%=form_for(@tool) do |f|%>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :description %>
-    <%= f.text_field :description%>
-    <%= f.label :condition %>
-    <%= f.text_field :condition%>
-    <%= f.label :price %>
-    <%= f.text_field :price%>
-    <%= f.submit%>
+<%= simple_form_for @tool do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :condition %>
+  <%= f.input :price %>
+  
+  
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
