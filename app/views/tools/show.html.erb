@@ -4,11 +4,13 @@
 		<div class="container-fliud">
 			<div class="wrapper row">
 				<div class="preview col-md-6">
-
 					<div class="preview-pic tab-content">
-					  <div class="tab-pane active" id="pic-1"><img src="https://cdn.thewirecutter.com/wp-content/uploads/2020/02/drills-lowres-2x1-0074-2-1024x512.jpg" /></div>
+                      <div class="tab-pane active" id="pic-1">
+                        <% @tool.photos.each do |photo| %>
+                            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                        <% end %>
+                        </div>
 					</div>
-
 
 				</div>
 				<div class="details col-md-6">
