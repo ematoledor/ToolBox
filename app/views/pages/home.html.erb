@@ -1,64 +1,248 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
   <title>ToolBox</title>
-  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
 
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- We need this line below for responsiveness! -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="pages/landing-page.min.css" rel="stylesheet">
+
 </head>
+
 <body>
-  <!-- code a Hero / Banner section -->
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
-    <div class="container-homepage">
-      <h1>ToolBox</h1>
-      <p>the AirBnB of Tools</p>
-      <a class="btn" href="/tools">click to see the available tools</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <!-- <a class="btn btn-primary" href="#">Sign In</a> -->
+      <%=link_to "Log In", user_session_path, class: "btn btn-primary"%>
     </div>
-  </div>
+  </nav>
 
-
-  <!-- code a "How it works" section -->
-  <div class="container-homepage">
-    <h2 class="text-center">How it works</h2>
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1579616043939-95d87a6e8512?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="">
-          <h4>Select your location</h4>
-          <p>Based on your address, ToolBox will match you with potenial rentals a mile from your radius.</p>
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">ToolBox</h1>
         </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="">
-          <h4>Browse the active rentals</h4>
-          <p>You can select from a specific category or search for the tool needed.</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1518709414768-a88981a4515d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
-          <h4>Rent your tool!</h4>
-          <p>Get ready to use the selected tool for your project.</p>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <!-- <a class="btn btn-block btn-lg btn-primary" href="#">Sign up!</a> -->
+                <%=link_to "Sign up!", new_user_registration_path, class: "btn btn-block btn-lg btn-primary"%>
+                <!-- <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button> -->
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-  <!-- code a footer -->
-  <div class="footer">
-    <div class="links">
+  </header>
 
-
-      <p>Experience workmanship, created by Da 3 Musketeers Inc. </p>
-
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <!-- <i class="icon-screen-desktop m-auto text-primary"></i> -->
+              <i class="fas fa-location-arrow m-auto text-primary"></i>
+            </div>
+            <h3>Select your location</h3>
+            <p class="lead mb-0"></p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <!-- <i class="icon-layers m-auto text-primary"></i> -->
+              <i class="fas fa-database m-auto text-primary"></i>
+            </div>
+            <h3>Browse the active rentals</h3>
+            <p class="lead mb-0"></p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <!-- <i class="icon-check m-auto text-primary"></i> -->
+              <i class="fas fa-toolbox m-auto text-primary"></i>
+            </div>
+            <h3>Rent your tool!</h3>
+            <p class="lead mb-0"></p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('https://images.unsplash.com/photo-1579616043939-95d87a6e8512?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Location</h2>
+          <p class="lead mb-0">Based on your address, ToolBox will match you with active rentals in your area.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Active Rentals</h2>
+          <p class="lead mb-0">You can select a specific tool for your project.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('https://images.unsplash.com/photo-1518709414768-a88981a4515d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2> My ToolBox</h2>
+          <p class="lead mb-0">Add the selected tool to your ToolBox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 class="mb-5">The Three Musketeers</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="https://avatars3.githubusercontent.com/u/64709573?v=4" alt="">
+            <h5>Gonzalo Carrillo</h5>
+            <p class="font-weight-light mb-0">Full Stack Devloper</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1591046824/kvo44za4sglloxmeveab.jpg" alt="">
+            <h5>Bhanu Gummadi</h5>
+            <p class="font-weight-light mb-0">Full Stack Devloper</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="https://avatars1.githubusercontent.com/u/64610332?v=4" alt="">
+            <h5>Emanuel Toledo</h5>
+            <p class="font-weight-light mb-0">Full Stack Devloper</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h2 class="mb-4">Ready to set up your ToolBox? Sign up now!</h2>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <!-- <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button> -->
+                <%=link_to "Sign up!", new_user_registration_path, class: "btn btn-block btn-lg btn-primary"%>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
