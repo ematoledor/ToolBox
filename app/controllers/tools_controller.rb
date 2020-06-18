@@ -25,12 +25,12 @@ class ToolsController < ApplicationController
         @tool.user = current_user
         @tool.save
     
-        redirect_to tools_path(@tool)
+        redirect_to tools_path()
     end
 
     private
     
     def tool_params
-        params.require(:tool).permit(:name, :description, :condition, :price, :address)
+        params.require(:tool).permit(:name, :description, :condition, :price, :address, photos: [])
     end
 end
