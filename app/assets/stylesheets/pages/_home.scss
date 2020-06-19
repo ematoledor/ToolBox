@@ -8,154 +8,124 @@
 @import url("components/buttons.css");
 /* Utilities */
 body {
-  margin: 0;
-  font-family: jost
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4 {
-  font-family:jost;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 
-a {
-  text-decoration: none;
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }
 
 
-.column {
-  float: left;
-  width: 30%;
-  padding: 0 10px;
-  justify-content: space-evenly;
-
-
+header.masthead h1 {
+  font-size: 2rem;
 }
 
-@media (max-width: 900px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
   }
 }
-// /* Remove extra left and right margins, due to padding */
-// .row {margin: 55px;
-// justify-content: space-around;
-// }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.showcase .showcase-text {
+  padding: 3rem;
 }
 
-/* Custom design below! */
-.container-homepage {
-  margin: 10px;
-  text-align: center;
-}
-
-.banner {
+.showcase .showcase-img {
+  min-height: 30rem;
   background-size: cover;
-  height:500px;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 48px;
-  font-weight: bold;
-  font-family: 'Jost', sans-serif;
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-family: 'Jost', sans-serif;
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
-.card img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-
-
+.features-icons .features-icons-item {
+  max-width: 20rem;
 }
 
-.card p {
-  opacity: .5;
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
 }
 
-.card {
-
-  border-radius: 3px;
-  box-shadow: 0 0 5px rgb(230,230,230);
-  text-align: center;
-  padding: 20px;
-  border: 1px solid rgb(230,230,230);
-
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
 }
 
-.cards {
-  justify-content: space-between;
-  margin-bottom: 30px;
-
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
 }
 
-.btn {
-color: #fff !important;
-text-transform: uppercase;
-text-decoration: none;
-background:black transparent;
-padding: 20px;
-border-radius: 20px;
-display: inline-block;
-border: 1px solid #ccc;
-transition: all 0.4s ease 0.05s;
-font-family: 'Jost', sans-serif;
-
-
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
-.btn:hover {
-text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-/*-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
--moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);*/
-background: transparent;
-color:black;
-transition: all 0.4s ease 0s;
-}
-.footer {
-  text-align: center;
-  padding: 60px;
-  background-color: #555;
+.testimonials .testimonial-item {
+  max-width: 18rem;
 }
 
-.footer a {
-  font-size: 30px;
-  color:  #E0BBE4;
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
 }
 
-.footer p {
-  color: #6B6C6C;
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat center center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
-.footer .fas {
-  color: #555;
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }
 
-
-
-
-
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
