@@ -37,9 +37,9 @@ photos = ['https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?ixlib=rb
 
 
 
-puts 'Creating 15 tools..'
+puts 'Creating 10 tools..'
 
-15.times do |i|
+10.times do |i|
   tool = Tool.create!(
     name:    Faker::Appliance.equipment,
     #name:  Faker::Commerce.product_name,
