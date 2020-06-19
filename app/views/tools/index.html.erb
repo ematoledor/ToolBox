@@ -1,68 +1,35 @@
-<head>
-
-</head>
-<body>
-    <div class="container">
-    <div>
-    <form class="form-inline d-flex justify-content-center">
-      <input id="zip" name="zip" type="text" pattern="[0-9]*" placeholder="Location">
+<div class="container">
+    <h1 class="mt-4">Active Listings</h1>
+    <form class="form-inline d-flex justify-content-center md-form form-sm mt-2 mb-3">
       <i class="fas fa-search" aria-hidden="true"></i>
+      <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+        aria-label="Search">
     </form>
-    </div>
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <div class="row">
-          <% @tools.each do |tool|%>
-            <div class="col-6">
-              <div class="card">
-                  <img class="card-img-top" src="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1371&q=80" class="rounded" alt="Image">
-                  <div class="card-body">
+        <% @tools.each do |tool|%>
+          <div class="col-sm-12 col-md-6">
+            <div class="card rounded mb-3">
+              <div class="cover-image" style="background-image: url('<%= cl_image_path tool.photos[0].key %>')" ></div>
+                <div class="card-body">
                   <p class="card-text"><%=tool.name%></p>
                   <p class="card-text">$<%=tool.price%></p>
-                  <%= link_to "Rent me", tool_path(tool)%>
-                  </div>
+                  <%= link_to "Rent me", tool_path(tool) %>
                 </div>
-<!-- Search form -->
-<!-- Page Content -->
-<div class="container">
-  <h1 class="mt-4">Active Listings</h1>
-  <p></p>
-</div>
-
-  <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-    <i class="fas fa-search" aria-hidden="true"></i>
-    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-      aria-label="Search">
-  </form>
-
-
-  <div class="container">
-    <div class="row">
-      <% @tools.each do |tool|%>
-        <div class="col-sm-12 col-md-4 col-xl-2">
-          <div class="card">
-              <img class="card-img-top">
-                <% tool.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, :class => 'imgsize'%>
-                <% end %> 
-              <div class="card-body">
-              <p class="card-text"><%=tool.name%></p>
-              <p class="card-text">$<%=tool.price%></p>
-              <%= link_to "Rent me", tool_path(tool) %>
-              </div>
-            
             </div>
-          <%end%>
+          </div>  
+        <%end%>
         </div>
       </div>
       <div class="col-sm-12 col-md-6">
-          <div id="map"
-            style="width: 100%; height: 600px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
+        <div id="map"
+          style="width: 100%; height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
       </div>
     </div>
   </div>
-  
-</body>
+
+
