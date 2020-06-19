@@ -48,7 +48,8 @@
           <%= image_tag "https://avatars3.githubusercontent.com/u/64709573?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Home", root_path, class: "dropdown-item" %>
-            <%= link_to "Active Rentals", tools_path, class: "dropdown-item" %>
+            <%= link_to "My ToolBox", tools_path, class: "dropdown-item" %>
+            <%= link_to "Active Listings", tools_path, class: "dropdown-item" %>
             <%= link_to "Create a listing", new_tool_path, class: "dropdown-item" %>
           </div>
         </li>

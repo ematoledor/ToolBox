@@ -1,5 +1,15 @@
-<%= simple_form_for [@tool, @rental] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+	<div class="card">
+		<div class="container-fliud">
+			<div class="wrapper row">
+				<div class="preview col-md-6">
+          <%= simple_form_for [@tool, @rental] do |f| %>
+            <h4><%= f.input :start_date %></h4>
+            <h4><%= f.input :end_date %><h4>
+            <%= f.button :submit, class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>         

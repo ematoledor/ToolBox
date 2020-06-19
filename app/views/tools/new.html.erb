@@ -1,12 +1,20 @@
-<h1> Input information </h1>
-<%= simple_form_for @tool do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :condition %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-
-  <%= f.button :submit, class: "btn btn-primary" %>
-  <%= link_to "Create Listing", new_tool_path %>
-<% end %>
+<div class="container">
+	<div class="card">
+		<div class="container-fliud">
+			<div class="wrapper row">
+				<div class="preview col-md-8">
+          <h3> Input Information </h3>
+          <%= simple_form_for @tool do |f| %>
+            <%= f.input :name %>
+            <%= f.input :description %>
+            <%= f.input :condition %>
+            <%= f.input :price %>
+            <%= f.input :address %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+            <%= f.button :submit, class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>        

@@ -12,10 +12,10 @@
           <div class="col-sm-12 col-md-6">
             <div class="card rounded mb-3">
               <div class="cover-image" style="background-image: url('<%= cl_image_path tool.photos[0].key %>')" ></div>
-                <div class="card-body">
+                <div class="card-body" style="text-align: center" >
                   <p class="card-text"><%=tool.name%></p>
                   <p class="card-text">$<%=tool.price%></p>
-                  <%= link_to "Rent me", tool_path(tool) %>
+                  <%= link_to "Rent Now", tool_path(tool), class: "add-to-cart btn btn-dark" %> 
                 </div>
             </div>
           </div>  
