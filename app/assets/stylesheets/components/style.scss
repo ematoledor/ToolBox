@@ -37,9 +37,9 @@ a {
   }
 }
 /* Remove extra left and right margins, due to padding */
-.row {margin: 55px;
-justify-content: space-around;
-}
+// .row {margin: 55px;
+// justify-content: space-around;
+// }
 
 /* Clear floats after the columns */
 .row:after {
@@ -144,7 +144,8 @@ transition: all 0.4s ease 0s;
   color: #555;
 }
 
-
-
+#map {
+  position: sticky;
+}
 
 
